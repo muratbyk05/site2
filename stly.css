@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 125px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    background: rgb(255,236,236);
+    background: linear-gradient(113deg, rgba(255,236,236,1) 47%, rgba(255,173,229,1) 69%);
+    
+    
+
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area:header;
+    background-repeat: no-repeat;
+    
+}
+
+
+header > ul{
+    display: flex;
+    list-style-type: none;
+    margin-right: 70px;
+    background-color:#8EDDB7;
+    border-radius: 50px;
+    
+} 
+
+
+header > ul > li{
+   margin: 20px;
+    
+}
+
+
+
+main{
+  
+    display: flex;
+    flex-direction: row;
+    grid-area: main;
+    justify-content: space-between;
+}
+
+
+
+.açıklama{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 2%;
+    text-transform: uppercase;
+    
+}
+
+.açıklama>h4{
+    font-size:22px;
+    margin-bottom: 20%;
+    word-spacing: 2px;
+}
+
+.açıklama>a{
+    text-decoration-color: rgb(216, 28, 28) ;
+    margin-top: 20%;
+    text-decoration-thickness: 2px;
+    color: teal;
+    
+}
+
+
+
+main > img{
+ 
+  height: 600px;
+  margin-right: 2%;
+}
+
+footer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    grid-area: footer;
+    background-repeat: no-repeat;
+    
+}
+
+footer>img{
+    
+    margin-left: 50px;
+
+}
+@media only screen and (max-width:50px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr 2fr 1;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+}
